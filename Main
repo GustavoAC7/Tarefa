@@ -1,0 +1,101 @@
+import Tarefa.Cidade;
+import Tarefa.Estado;
+
+public class Main {
+    public  static void main(String[] args) {
+        Cidade cidade1 = new Cidade();
+        cidade1.setNome("anapolis");
+        cidade1.setEstado(new Estado());
+        cidade1.getEstado().setNome("Goias");
+        cidade1.getEstado().setSigla("GO");
+        System.out.println(cidade1);
+
+
+
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Cidade cidade2 = new Cidade();
+        cidade2.setNome("Angra dos Reis");
+        cidade2.setEstado(new Estado());
+        cidade2.getEstado().setNome("Rio de janeiro");
+        cidade2.getEstado().setSigla("RJ");
+        System.out.println(cidade2);
+    }
+}
+
+
+
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''' ESTADO.JAVA
+
+package Tarefa;
+
+public class Estado {
+
+    private String nome ;
+    private String sigla ;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    @Override
+    public String toString() {
+        return "Estado{" +
+                "nome='" + nome + '\'' +
+                ", sigla='" + sigla + '\'' +
+                '}';
+    }
+}
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''' CIDADE.JAVA
+
+
+
+package Tarefa;
+
+public class Cidade {
+
+    private String nome ;
+    private Estado estado ;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Cidade{" +
+                "nome='" + nome + '\'' +
+                ", estado=" + estado +
+                '}';
+    }
+}
